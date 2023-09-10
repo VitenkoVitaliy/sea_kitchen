@@ -46,54 +46,28 @@ $APPLICATION->SetTitle("Ресторан Морская кухня");
     <!-- gallery end -->
     
     <!-- Мероприятия -->
-    <div class="event_area">
-        <div class="container">
-            <div class="row">
-                <div class="col-xl-12">
-                    <div class="section_title text-center mb-50">
-                        <h3>Мероприятия</h3>
-                    </div>
-                </div>
-            </div>
-            <div class="section-top-border">
-                <div class="row">
-                    <div class="col-md-4">
-                        <div class="single-defination">
-                            <h4 class="mb-20">Мероприятие 01</h4>
-                            <p>Recently, the US Federal government banned online casinos from operating in America by
-                                making it illegal to
-                                transfer money to them through any US bank or payment system. As a result of this law,
-                                most of the popular
-                                online casino networks</p>
-                                <a href="events/events_detail.php" class="genric-btn default">Подробнее</a>
-                        </div>
-                    </div>
-                    <div class="col-md-4">
-                        <div class="single-defination">
-                            <h4 class="mb-20">Мероприятие 02</h4>
-                            <p>Recently, the US Federal government banned online casinos from operating in America by
-                                making it illegal to
-                                transfer money to them through any US bank or payment system. As a result of this law,
-                                most of the popular
-                                online casino networks</p>
-                                <a href="events/events_detail.php" class="genric-btn default">Подробнее</a>
-                        </div>
-                    </div>
-                    <div class="col-md-4">
-                        <div class="single-defination">
-                            <h4 class="mb-20">Мероприятие 03</h4>
-                            <p>Recently, the US Federal government banned online casinos from operating in America by
-                                making it illegal to
-                                transfer money to them through any US bank or payment system. As a result of this law,
-                                most of the popular
-                                online casino networks</p>
-                                <a href="events/events_detail.php" class="genric-btn default">Подробнее</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
+    <br>
+			 <?$APPLICATION->IncludeComponent(
+				"bitrix:news.line",
+				"event_line_main_page",
+				Array(
+					"ACTIVE_DATE_FORMAT" => "d.m.Y",
+					"CACHE_GROUPS" => "Y",
+					"CACHE_TIME" => "300",
+					"CACHE_TYPE" => "A",
+					"COMPONENT_TEMPLATE" => "event_line_main_page",
+					"DATE" => "d.m.Y",
+					"DETAIL_URL" => "",
+					"FIELD_CODE" => array(0=>"DETAIL_TEXT",1=>"DATE",2=>"",),
+					"IBLOCKS" => array(0=>"5",),
+					"IBLOCK_TYPE" => "events",
+					"NEWS_COUNT" => "3",
+					"SORT_BY1" => "NAME",
+					"SORT_BY2" => "SORT",
+					"SORT_ORDER1" => "ASC",
+					"SORT_ORDER2" => "ASC"
+				)
+			);?><br>
     <!-- / Мероприятия -->
     <!-- testimonial_area  -->
     <div class="testimonial_area overlay ">
