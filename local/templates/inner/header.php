@@ -103,7 +103,7 @@ Loc::loadMessages(__FILE__);
                                             <li><a href="/catalog/index.php">Меню</a></li>
                                             <li><a href="#">О ресторане <i class="ti-angle-down"></i></a>
                                                 <ul class="submenu">
-                                                    <li><a href="/about/about.php">О нас</a></li>
+                                                    <li><a href="/about/index.php">О нас</a></li>
                                                     <li><a href="/about/contact.php">Контакты</a></li>
                                                 </ul>
                                             </li>
@@ -130,12 +130,26 @@ Loc::loadMessages(__FILE__);
     </header>
     <!-- header-end -->
 	    <!-- bradcam_area  -->
+		
+		
+		
+		
     <div class="bradcam_area bradcam_bg_2">
         <div class="container">
             <div class="row">
                 <div class="col-xl-12">
                     <div class="bradcam_text text-center">
-                        <h3>Мероприятия для наших гостей</h3>
+                        <h3>
+						<?$APPLICATION->IncludeComponent(
+							"bitrix:main.include",
+							"",
+							Array(
+								"AREA_FILE_RECURSIVE" => "Y",
+								"AREA_FILE_SHOW" => "page",
+								"AREA_FILE_SUFFIX" => "inc",
+								"EDIT_TEMPLATE" => ""
+							)
+						);?></h3>
                     </div>
                 </div>
             </div>
