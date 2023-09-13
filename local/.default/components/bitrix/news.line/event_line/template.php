@@ -13,7 +13,6 @@
 $this->setFrameMode(true);
 ?>
 
-
 <!-- Start Align Area -->
  
 	                        
@@ -23,7 +22,7 @@ $this->setFrameMode(true);
 								$this->AddDeleteAction($arItem['ID'], $arItem['DELETE_LINK'], CIBlock::GetArrayByID($arItem["IBLOCK_ID"], "ELEMENT_DELETE"), array("CONFIRM" => GetMessage('CT_BNL_ELEMENT_DELETE_CONFIRM')));
 								?>
 									<div class="table-row" id="<?=$this->GetEditAreaId($arItem['ID']);?>">
-										<div class="date"><?=$arItem["DATE"]?></div>
+										<div class="date"><?=$arItem["DATE_ACTIVE_FROM"]?></div>
 										<div class="title"><?=$arItem["NAME"]?></div>
 										<div class="agenda"><?=$arItem["PREVIEW_TEXT"]?>
 										</div>
