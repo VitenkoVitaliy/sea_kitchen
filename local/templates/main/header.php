@@ -23,10 +23,6 @@ Loc::loadMessages(__FILE__);
   Asset::getInstance()->addString('<link rel="shortcut icon" type="image/x-icon" href="' . SITE_TEMPLATE_PATH . '/img/favicon.png" />');
   Asset::getInstance()->addString('<link href="https://fonts.googleapis.com/css?family=Philosopher:400,400i,700,700i|Poppins:200,200i,300,300i,400,400i,500,600,700,800,900&display=swap" rel="stylesheet">');
   ?>
-
-  <!-- Place favicon.ico in the root directory -->
-
-  <!-- CSS here -->
   <?
   Asset::getInstance()->addCss(SITE_TEMPLATE_PATH . '/css/bootstrap.min.css');
   Asset::getInstance()->addCss(SITE_TEMPLATE_PATH . '/css/owl.carousel.min.css');
@@ -86,8 +82,8 @@ Loc::loadMessages(__FILE__);
                     <div class="row align-items-center no-gutters">
                         <div class="col-xl-3 col-lg-2">
                             <div class="logo">
-                                <a href="index.html">
-                                    <img src="img/logo.png" alt="">
+                                <a href="../index.php">
+                                    <img src="../img/logo.png" alt="">
                                 </a>
                             </div>
                         </div>
@@ -95,8 +91,8 @@ Loc::loadMessages(__FILE__);
                             <div class="main-menu  d-none d-lg-block">
                                 <nav>
                                     <ul id="navigation">
-                                        <li><a class="active" href="index.html">Главная</a></li>
-                                        <li><a href="catalog/index.html">Меню</a></li>
+                                        <li><a class="active" href="../index.php">Главная</a></li>
+                                        <li><a href="../catalog/index.php">Меню</a></li>
                                         <li><a href="#">О ресторане <i class="ti-angle-down"></i></a>
                                             <ul class="submenu">
                                                 <li><a href="about.html">О нас</a></li>

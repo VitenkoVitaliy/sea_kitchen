@@ -61,13 +61,20 @@
                             <h3 class="footer_title">
                                 Поиск
                             </h3>
-                            <form action="/search/" class="newsletter_form">
-                                <input type="text" placeholder="Поиск по сайту">
-                                <button type="submit">Найти</button>
-                            </form>
+                            <?$APPLICATION->IncludeComponent(
+                                "bitrix:search.form", 
+                                "template1", 
+                                array(
+                                    "PAGE" => "#SITE_DIR#search/index.php",
+                                    "USE_SUGGEST" => "N",
+                                    "COMPONENT_TEMPLATE" => "template1"
+                                ),
+                                false
+                            );?>
                             <p class="newsletter_text">Найдется всё, что нужно.</p>
                         </div>
                     </div>
+
                 </div>
             </div>
         </div>
