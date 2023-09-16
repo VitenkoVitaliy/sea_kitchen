@@ -48,12 +48,31 @@
                             <h3 class="footer_title">
                                 Полезные ссылки
                             </h3>
-                            <ul>
-                                <li><a href="catalog/index.html">Меню</a></li>
-                                <li><a href="about.html">О нас</a></li>
-                                <li><a href="reviews/index.html">Отзывы</a></li>
-                                <li><a href="events/index.html">Мероприятия</a></li>
-                            </ul>
+                            <?$APPLICATION->IncludeComponent(
+                                "bitrix:menu", 
+                                "template1", 
+                                array(
+                                    "ALLOW_MULTI_SELECT" => "N",
+                                    "CHILD_MENU_TYPE" => "top",
+                                    "DELAY" => "N",
+                                    "MAX_LEVEL" => "1",
+                                    "MENU_CACHE_GET_VARS" => array(
+                                        0 => "Меню",
+                                        1 => "О нас",
+                                        2 => "Отзывы",
+                                        3 => "Мероприятия",
+                                        4 => "",
+                                    ),
+                                    "MENU_CACHE_TIME" => "3600",
+                                    "MENU_CACHE_TYPE" => "A",
+                                    "MENU_CACHE_USE_GROUPS" => "N",
+                                    "MENU_THEME" => "site",
+                                    "ROOT_MENU_TYPE" => "top",
+                                    "USE_EXT" => "N",
+                                    "COMPONENT_TEMPLATE" => "template1"
+                                ),
+                                false
+                            );?> 
                         </div>
                     </div>
                     <div class="col-xl-4 col-md-6 col-lg-4">
